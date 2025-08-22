@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home", type: "scroll" },
+    { name: "Services", href: "#services", type: "scroll" },
+    { name: "About Us", href: "#about", type: "scroll" },
+    { name: "Contact", href: "/contact", type: "route" }, // <-- Route instead of scroll
   ];
 
   const scrollToSection = (href) => {
     setIsOpen(false);
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNavClick = (item) => {
+    if (item.type === "scroll") {
+      scrollToSection(item.href);
+    } else if (item.type === "route") {
+      setIsOpen(false);
+      navigate(item.href);
+    }
   };
 
   return (
@@ -26,10 +37,9 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <img
               src="/images/codeaxis.png"
-              alt="DevConsult Pro Logo"
+              alt="CodeAxis Logo"
               className="h-20 w-20 object-contain"
             />
-            {/* <span className="text-xl font-bold text-gray-900">DevConsult Pro</span> */}
           </div>
 
           {/* Desktop Navigation */}
@@ -37,7 +47,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-200"
               >
                 {item.name}
@@ -79,7 +89,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-700 hover:bg-gray-50 font-medium transition-colors duration-200"
                 >
                   {item.name}

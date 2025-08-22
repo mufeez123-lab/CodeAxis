@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       position: "CEO, TechStart Solutions",
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200",
-      content: "DevConsult Pro transformed our business with a custom CRM that increased our productivity by 40%. Their team's expertise and dedication exceeded our expectations.",
+      content: "CodeAxis transformed our business with a custom CRM that increased our productivity by 40%. Their team's expertise and dedication exceeded our expectations.",
       rating: 5,
       project: "Custom CRM System"
     },
@@ -23,7 +23,7 @@ const Testimonials = () => {
       name: "Emily Rodriguez",
       position: "Founder, EcoCommerce",
       image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=200",
-      content: "Our e-commerce platform built by DevConsult Pro has generated over $2M in revenue. Their attention to detail and post-launch support is exceptional.",
+      content: "Our e-commerce platform built by CodeAxis has generated over $2M in revenue. Their attention to detail and post-launch support is exceptional.",
       rating: 5,
       project: "E-commerce Platform"
     },
@@ -47,7 +47,7 @@ const Testimonials = () => {
       name: "Robert Williams",
       position: "VP Technology, FinanceFirst",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=200",
-      content: "Their cloud migration strategy saved us 60% in infrastructure costs while improving performance. DevConsult Pro is our trusted technology partner.",
+      content: "Their cloud migration strategy saved us 60% in infrastructure costs while improving performance. CodeAxis is our trusted technology partner.",
       rating: 5,
       project: "Cloud Migration"
     }
@@ -65,7 +65,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients 
-            have to say about working with DevConsult Pro.
+            have to say about working with CodeAxis.
           </p>
         </div>
 

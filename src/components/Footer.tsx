@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
         <img
               src="/images/codeaxis.png"
-              alt="DevConsult Pro Logo"
+              alt="CodeAxis Logo"
               className="h-20 w-20 object-contain"
             />
               
@@ -96,51 +96,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-center mb-8">Get In Touch</h3>
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
-              />
-              <input
-                type="text"
-                placeholder="Subject"
-                className="md:col-span-2 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
-              />
-              <textarea
-                rows={4}
-                placeholder="Your Message"
-                className="md:col-span-2 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 text-white placeholder-gray-400 resize-none"
-              ></textarea>
-              <button
-                type="submit"
-                className="md:col-span-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
+    
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-center md:text-left">
-            © 2025 DevConsult Pro. All rights reserved.
+            © 2025 CodeAxis. All rights reserved.
           </p>
           <div className="flex items-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a> */}
             <button 
               onClick={scrollToTop}
               className="text-gray-400 hover:text-white transition-colors flex items-center space-x-1"
